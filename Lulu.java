@@ -5,9 +5,10 @@ import java.util.Scanner;
 
 public class Lulu {
     public static void menu() {
-        System.out.println("Mequi");
-        System.out.println("Bateu aquela #Fome de Méqui\n");
-        System.out.print("Selecione a sua opção :\n");
+        System.out.println();
+    	System.out.println("|Mequi");
+        System.out.println(" Bateu aquela #Fome de Méqui\n");
+        System.out.print(" Selecione a sua opção :\n");
         System.out.println("1 - Cardápio");
         System.out.println("2 - Lançamentos");
         System.out.println("3 - Quem Somos");
@@ -75,7 +76,8 @@ public class Lulu {
     }
 
     public static void quemSomos() { 
-    	
+    	 Scanner ler = new Scanner(System.in);
+         int opcao;
     	System.out.print("\n\n-- QuemSomos --\n\n");
         System.out.print("|-----------------------------------------------------------------------------|\n");
         System.out.print("|1-institucional         || 2- Franquias               || 3- Trabalhe Conosco |\n");
@@ -87,8 +89,39 @@ public class Lulu {
     	
     }
     
+   public static void lancamentos() 
+   {
+	   Scanner ler = new Scanner(System.in);
+       int opcao;
+       do {
+    	   
+    	   System.out.print("\n\n-- Lancamentos --\n\n");
+           System.out.print("|-----------------------------------------------------|\n");
+           System.out.print("| Opção 1  - McBrasil                                 |\n");
+           System.out.print("| Opção 2  - McFlurry Brasil                          |\n");
+           System.out.print("| Opção 3  - McEspanha                                |\n");
+           System.out.print("| Opção 4  - McArgentina                              |\n");
+           System.out.print("| Opção 5  - McAlemanha                               |\n");
+           System.out.print("| Opção 6  - McMéxico                                 |\n");
+           System.out.print("| Opção 7  - McFrança                                 |\n");
+           System.out.print("| Opção 8  - McEua                                    |\n");
+           System.out.print("| Opção 9  - McCatar                                  |\n");
+           System.out.print("| Opção 10 - McFlurry Espetáculo Kopenhagen Morango   |\n");
+           System.out.print("| Opção 11 - McFlurry Espetáculo Kopenhagen Chocolate |\n");
+           System.out.print("| Opção 12 - McFlurry Espetáculo Kopenhagen Caramelo  |\n");
+           System.out.print("| Opção 13 - Blister CBO                              |\n");
+           System.out.print("| Opção 14 - Blister Tasty                            |\n");
+           System.out.print("| Opção 0 - Para voltar ao menu                       |\n");
+           System.out.print("|-----------------------------------------------------|\n");
+           System.out.print("Digite uma opção: ");
+           opcao = ler.nextInt();
+       }while (opcao != 0);
+   }
+ 
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+
+    	
+    	Scanner ler = new Scanner(System.in);
         int opcao;
         do {
             menu();
@@ -101,11 +134,12 @@ public class Lulu {
 
 
                 case 2:
-                    //FAZER O MENU DOS OUTROS
+                   lancamentos();
                     break;
 
                 case 3:
                     quemSomos();
+                    opcao=ler.nextInt();
                     break;
 
                 default:
@@ -115,12 +149,3 @@ public class Lulu {
         } while (opcao != 0);
     }
 }
-
-
-
-
-
-
-	
-
-
